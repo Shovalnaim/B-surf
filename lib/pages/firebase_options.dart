@@ -25,8 +25,8 @@ class DefaultFirebaseOptions {
     switch (defaultTargetPlatform) {
       case TargetPlatform.android:
         return android;
-      // case TargetPlatform.iOS:
-      //   return ios;
+      case TargetPlatform.iOS:
+        return ios;
       case TargetPlatform.macOS:
         throw UnsupportedError(
           'DefaultFirebaseOptions have not been configured for macos - '
@@ -57,13 +57,13 @@ class DefaultFirebaseOptions {
     storageBucket: 'b-surf-e0129.appspot.com',//
   );
 
-  // static const FirebaseOptions ios = FirebaseOptions(
-  //   apiKey: 'AIzaSyAtK0EBeIcpdeEgeoNtiTwhzhH1CePx6FA',//
-  //   appId: '1:493142238383:ios:ba3db78298d6c6820b205a',//
-  //   messagingSenderId: '493142238383',//
-  //   projectId: 'b-surf-e0129', //
-  //   storageBucket: 'b-surf-e0129.appspot.com',//
-  //   iosClientId: '871763687694-f222kn4h14h6h57iheh18i7ho7640kt6.apps.googleusercontent.com',
-  //   iosBundleId: 'com.example.bSurf',
-  // );
+  static const FirebaseOptions ios = FirebaseOptions(
+    apiKey: 'AIzaSyAtK0EBeIcpdeEgeoNtiTwhzhH1CePx6FA',//
+    appId: '1:493142238383:ios:ba3db78298d6c6820b205a',//
+    messagingSenderId: '493142238383',//
+    projectId: 'b-surf-e0129', //
+    storageBucket: 'b-surf-e0129.appspot.com',//
+    iosClientId: 'firebase-adminsdk-k30p6@b-surf-e0129.iam.gserviceaccount.com',//'871763687694-f222kn4h14h6h57iheh18i7ho7640kt6.apps.googleusercontent.com',
+    iosBundleId: 'com.shoval.bbsurf',
+  );
 }

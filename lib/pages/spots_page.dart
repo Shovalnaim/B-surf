@@ -28,6 +28,7 @@ class _SpotsPageState extends State<SpotsPage> {
       User? user = FirebaseAuth.instance.currentUser;
       if (user != null) {
         loggedInUser = user;
+        print(loggedInUser);
         DocumentSnapshot userDoc = await FirebaseFirestore.instance
             .collection('users')
             .doc(loggedInUser!.uid)
