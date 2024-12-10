@@ -36,7 +36,7 @@ android {
 
     defaultConfig {
         applicationId "com.shoval.bbsurf"
-        minSdkVersion localProperties.getProperty('flutter.minSdkVersion').toInteger()
+        minSdkVersion 31
         targetSdkVersion flutter.targetSdkVersion
         versionCode flutterVersionCode.toInteger()
         versionName flutterVersionName

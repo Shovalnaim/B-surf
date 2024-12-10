@@ -183,8 +183,11 @@ class _WindPageState extends State<WindPage> {
                       },
                     );
                     await checkAndRequestLocationPermission();
-                    final latitude = _userLocation?.latitude;
-                    final longitude = _userLocation?.longitude;
+                    final latitude =
+                       _userLocation?.latitude;
+                    final longitude =
+                        _userLocation?.longitude;
+
                     // Get the current user
                     User? user = FirebaseAuth.instance.currentUser;
                     if (user != null) {
@@ -192,6 +195,8 @@ class _WindPageState extends State<WindPage> {
                           user.uid; // Get the UID of the authenticated user
                       final url =
                           'https://us-central1-b-surf.cloudfunctions.net/findSpotsWind?value=$_selectedValue&latitude=$latitude&longitude=$longitude&uid=$uid';
+                      print('URL: $url');
+
                       await fetchSpotsWind(url);
                       // Update the wind message based on whether wind data is available
                       setState(() {
